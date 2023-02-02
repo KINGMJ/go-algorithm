@@ -19,3 +19,19 @@ var _ = Describe("快速排序", func() {
 		Expect(QuickSort([]int{6, 1, 4, 9, 5, 8})).To(Equal([]int{1, 4, 5, 6, 8, 9}))
 	})
 })
+
+var _ = Describe("冒泡排序", func() {
+	It("冒泡排序", func() {
+		Expect(BubbleSort([]int{9, 1, 5, 8, 3, 7, 4, 6, 2})).To(Equal([]int{1, 2, 3, 4, 5, 6, 7, 8, 9}))
+	})
+
+	It("冒泡排序算法改进", func() {
+		Expect(BubbleSort1([]int{9, 1, 5, 8, 3, 7, 4, 6, 2})).To(Equal([]int{1, 2, 3, 4, 5, 6, 7, 8, 9}))
+	})
+})
+
+var _ = Describe("插入排序", func() {
+	It("插入排序", func() {
+		Expect(InsertionSort([]int{6, 4, 1, 2, 5})).To(Equal([]int{1, 2, 4, 5, 6}))
+	})
+})

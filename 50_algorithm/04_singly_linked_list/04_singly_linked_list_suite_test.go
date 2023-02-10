@@ -1,4 +1,4 @@
-package _04_linked_list_test
+package _04_singly_linked_list_test
 
 import (
 	"testing"

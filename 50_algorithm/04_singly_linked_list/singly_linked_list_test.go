@@ -1,4 +1,4 @@
-package _04_linked_list
+package _04_singly_linked_list
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	_ "github.com/onsi/gomega"
 )
 
-var _ = Describe("LinkedList", func() {
+var _ = Describe("Singly Linked List", func() {
 	It("单链表测试", func() {
 		linkedList := NewLinkedList()
 		// append 操作

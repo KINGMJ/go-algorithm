@@ -6,7 +6,7 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-var _ = Describe("使用双指针逆转数组", func() {
+var _ = Describe("使用双指针逆转链表", func() {
 	It("用例1", func() {
 		linkedList := Array2List([]interface{}{1, 2, 3, 4, 5})
 		head := ReverseList(linkedList.Head.Next)
@@ -26,7 +26,7 @@ var _ = Describe("使用双指针逆转数组", func() {
 	})
 })
 
-var _ = Describe("使用递归逆转数组", func() {
+var _ = Describe("使用递归逆转链表", func() {
 	It("用例1", func() {
 		linkedList := Array2List([]interface{}{1, 2, 3, 4, 5})
 		head := ReverseList2(linkedList.Head.Next)

@@ -1,4 +1,5 @@
 # go-algorithm
+
 golang algorithm practice
 
 ## 测试生成
@@ -13,7 +14,7 @@ ginkgo generate xxx
 ginkgo
 ```
 
-## 50_algorithm
+## 50_algorithm（50 个必会的数据结构与算法）
 
 - 01_dynamic_array：实现一个支持动态扩容的数组
 - 02_ordered_array：实现一个大小固定的有序数组，支持动态增删改操作
@@ -31,7 +32,4 @@ ginkgo
 - 12_queue_on_list：链表实现一个链式队列
 - 13_circular_queue：实现一个循环队列
 - 14_permutations：全排列
-
-
-
 

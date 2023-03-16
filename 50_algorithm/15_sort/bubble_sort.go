@@ -38,7 +38,6 @@ func BubbleSort1(arr []int) []int {
 				flag = true // 有数据交换，置为 true
 			}
 		}
-
 	}
 	return arr
 }

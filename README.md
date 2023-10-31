@@ -32,4 +32,5 @@ ginkgo
 - 12_queue_on_list：链表实现一个链式队列
 - 13_circular_queue：实现一个循环队列
 - 14_permutations：全排列
-
+- 15_sort：排序算法
+- 22_binary_tree：二叉树的前、中、后、层序遍历

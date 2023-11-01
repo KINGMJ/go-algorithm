@@ -25,7 +25,7 @@ var _ = Describe("DoublyLinkedList", func() {
 		fmt.Print(node.next.data)
 		fmt.Print(node.prev.data)
 
-		// // 删除测试
+		// 删除测试
 		linkedList.Delete(3)
 		linkedList.Print()
 		node = linkedList.Get(2)

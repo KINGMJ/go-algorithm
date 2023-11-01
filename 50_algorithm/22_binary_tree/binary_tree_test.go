@@ -77,3 +77,15 @@ var _ = Describe("后续遍历，栈实现", func() {
 		Expect(PostOrderTraversal1(tree)).To(Equal([]interface{}{2, 1}))
 	})
 })
+
+var _ = Describe("层序遍历，队列实现", func() {
+	It("[1, nil, 2, 3]", func() {
+		tree := Array2Tree([]interface{}{1, nil, 2, 3})
+		Expect(LeveLOrderTraversal(tree)).To(Equal([]interface{}{1, 2, 3}))
+	})
+
+	It("[1, 2, 3, nil, nil, 4, 5]", func() {
+		tree := Array2Tree([]interface{}{1, 2, 3, nil, nil, 4, 5})
+		Expect(LeveLOrderTraversal(tree)).To(Equal([]interface{}{1, 2, 3, 4, 5}))
+	})
+})

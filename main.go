@@ -3,11 +3,12 @@ package main
 import (
 	"fmt"
 
+	binary_tree "github.com/KINGMJ/go-algorithm/50_algorithm/22_binary_tree"
 	. "github.com/KINGMJ/go-algorithm/structure"
 )
 
 func main() {
-	arr := []interface{}{1, nil, 2, 3, 4, nil, nil, 5}
-	tree := Array2Tree(arr)
-	fmt.Print(tree)
+	tree := Array2Tree([]interface{}{1, nil, 2, 3})
+	fmt.Println(binary_tree.LeveLOrderTraversal(tree))
+
 }

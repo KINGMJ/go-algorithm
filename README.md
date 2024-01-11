@@ -34,3 +34,11 @@ ginkgo
 - 14_permutations：全排列
 - 15_sort：排序算法
 - 22_binary_tree：二叉树的前、中、后、层序遍历
+
+## structure （实现的各种数据结构）
+
+- binary_tree：二叉树
+- binary_search_tree：二叉查找树
+- linked_list：链表
+- sq_queue：顺序队列
+- sq_stack：顺序栈

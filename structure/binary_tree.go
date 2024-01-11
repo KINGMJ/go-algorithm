@@ -1,9 +1,5 @@
 package structure
 
-import (
-	_11_queue_on_array "github.com/KINGMJ/go-algorithm/50_algorithm/11_queue_on_array"
-)
-
 // 二叉树节点
 type TreeNode struct {
 	Value interface{}
@@ -26,7 +22,7 @@ func Array2Tree(arr []interface{}) *TreeNode {
 	isLChild := true
 
 	// 根节点放入队列
-	queue := _11_queue_on_array.NewSqQueue(len)
+	queue := NewSqQueue(len)
 	queue = queue.EnQueue(root)
 
 	// 从第二个元素开始遍历：

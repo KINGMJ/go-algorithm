@@ -42,3 +42,11 @@ ginkgo
 - linked_list：链表
 - sq_queue：顺序队列
 - sq_stack：顺序栈
+
+## leetcode
+
+- 01_tow_sum: 两数之和
+- 02_contains_duplicate：存在重复元素
+- 03_sell_stock：买卖股票的最佳时期
+- 04_n_queens：N 皇后
+- 05_permutations：全排列

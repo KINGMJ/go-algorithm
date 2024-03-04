@@ -45,8 +45,10 @@ ginkgo
 
 ## leetcode
 
-- 01_tow_sum: 两数之和
-- 02_contains_duplicate：存在重复元素
-- 03_sell_stock：买卖股票的最佳时期
-- 04_n_queens：N 皇后
-- 05_permutations：全排列
+- 01_tow_sum: 1. 两数之和
+- 02_contains_duplicate：217. 存在重复元素
+- 03_sell_stock：121. 买卖股票的最佳时机
+- 04_n_queens：51. N 皇后
+- 05_permutations：46. 全排列
+- 06_assign_cookies：455. 分发饼干
+- 07_product_of_array_except_self：238. 除自身以外数组的乘积

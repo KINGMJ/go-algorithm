@@ -74,66 +74,66 @@ func NewArray(capacity int) *Array {
 
 // Capacity
 //
-//	@receiver this 这里的 this 没有任何含义，go中没有该关键字
+//	@receiver arr 这里的 arr 没有任何含义，go中没有该关键字
 //	@return int
-func (this *Array) Capacity() int {
-	return cap(this.data)
+func (arr *Array) Capacity() int {
+	return cap(arr.data)
 }
 
-func (this *Array) Length() int {
-	return this.length
+func (arr *Array) Length() int {
+	return arr.length
 }
 
-func (this *Array) Insert(index int, element interface{}) {
+func (arr *Array) Insert(index int, element interface{}) {
 	// 数组越界
-	if index < 0 || index > this.length {
+	if index < 0 || index > arr.length {
 		panic("index out of range")
 	}
 	// 数组已满则扩容
-	if this.length == this.Capacity() {
-		this.resize(2 * this.length)
+	if arr.length == arr.Capacity() {
+		arr.resize(2 * arr.length)
 	}
 	// 将插入的索引位置之后的元素后移，腾出插入位置
-	for i := this.length; i > index; i-- {
-		this.data[i] = this.data[i-1]
+	for i := arr.length; i > index; i-- {
+		arr.data[i] = arr.data[i-1]
 	}
 	// 插入元素
-	this.data[index] = element
-	this.length++
+	arr.data[index] = element
+	arr.length++
 }
 
-func (this *Array) Push(element interface{}) {
-	this.Insert(this.length, element)
+func (arr *Array) Push(element interface{}) {
+	arr.Insert(arr.length, element)
 }
 
-func (this *Array) Unshift(element interface{}) {
-	this.Insert(0, element)
+func (arr *Array) Unshift(element interface{}) {
+	arr.Insert(0, element)
 }
 
-func (this *Array) Clear() {
-	this.data = make([]interface{}, this.Capacity())
-	this.length = 0
+func (arr *Array) Clear() {
+	arr.data = make([]interface{}, arr.Capacity())
+	arr.length = 0
 }
 
-func (this *Array) Remove(index int) interface{} {
+func (arr *Array) Remove(index int) interface{} {
 	// 数组越界
-	if index < 0 || index >= this.length {
+	if index < 0 || index >= arr.length {
 		panic("index out of range")
 	}
-	element := this.data[index]
-	for i := index; i < this.length-1; i++ {
-		this.data[i] = this.data[i+1]
+	element := arr.data[index]
+	for i := index; i < arr.length-1; i++ {
+		arr.data[i] = arr.data[i+1]
 	}
-	this.length--
+	arr.length--
 	// 缩容
-	if this.length == len(this.data)/4 {
-		this.resize(len(this.data) / 2)
+	if arr.length == len(arr.data)/4 {
+		arr.resize(len(arr.data) / 2)
 	}
 	return element
 }
 
-func (this *Array) FindIndex(cond func(interface{}) bool) int {
-	for index, el := range this.data {
+func (arr *Array) FindIndex(cond func(interface{}) bool) int {
+	for index, el := range arr.data {
 		if cond(el) {
 			return index
 		}
@@ -141,37 +141,37 @@ func (this *Array) FindIndex(cond func(interface{}) bool) int {
 	return -1
 }
 
-func (this *Array) Set(index int, element interface{}) {
-	if index < 0 || index >= this.length {
+func (arr *Array) Set(index int, element interface{}) {
+	if index < 0 || index >= arr.length {
 		panic("index out of range")
 	}
-	this.data[index] = element
+	arr.data[index] = element
 }
 
 // resize 数组扩容
 //
-//	@receiver this
+//	@receiver arr
 //	@param capacity
-func (this *Array) resize(capacity int) {
+func (arr *Array) resize(capacity int) {
 	newArr := make([]interface{}, capacity)
-	for i := 0; i < this.length; i++ {
-		newArr[i] = this.data[i]
+	for i := 0; i < arr.length; i++ {
+		newArr[i] = arr.data[i]
 	}
-	this.data = newArr
+	arr.data = newArr
 }
 
 // 重写数组打印时的展示形式
 //
-//	@receiver this
+//	@receiver arr
 //	@return string
-func (this *Array) String() string {
+func (arr *Array) String() string {
 	var buffer bytes.Buffer
-	str := fmt.Sprintf("数组：length= %d, capacity= %d\n", this.length, this.Capacity())
+	str := fmt.Sprintf("数组：length= %d, capacity= %d\n", arr.length, arr.Capacity())
 	buffer.WriteString(str)
 	buffer.WriteString("[")
-	for i := 0; i < this.length; i++ {
-		buffer.WriteString(fmt.Sprint(this.data[i]))
-		if i < this.length-1 {
+	for i := 0; i < arr.length; i++ {
+		buffer.WriteString(fmt.Sprint(arr.data[i]))
+		if i < arr.length-1 {
 			buffer.WriteString(", ")
 		}
 	}

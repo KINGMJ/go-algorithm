@@ -2,17 +2,17 @@ package structure
 
 // 二叉树节点
 type TreeNode struct {
-	Value interface{}
+	Value any
 	Left  *TreeNode
 	Right *TreeNode
 }
 
-func NewTreeNode(value interface{}) *TreeNode {
+func NewTreeNode(value any) *TreeNode {
 	return &TreeNode{Value: value, Left: nil, Right: nil}
 }
 
 // 数组转二叉树，使用leetcode紧凑表示法
-func Array2Tree(arr []interface{}) *TreeNode {
+func Array2Tree(arr []any) *TreeNode {
 	len := len(arr)
 	if len == 0 {
 		return nil

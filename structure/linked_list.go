@@ -1,7 +1,7 @@
 package structure
 
 type ListNode struct {
-	Data interface{}
+	Data any
 	Next *ListNode
 }
 
@@ -21,7 +21,7 @@ func NewLinkedList() *LinkedList {
 // 数组转链表
 //
 //	@param arr
-func Array2List(arr []interface{}) *LinkedList {
+func Array2List(arr []any) *LinkedList {
 	linkedList := NewLinkedList()
 	current := linkedList.Head
 	for _, item := range arr {
@@ -33,22 +33,22 @@ func Array2List(arr []interface{}) *LinkedList {
 
 // 链表转数组： 使用递归 + 闭包
 //
-//	@receiver this
-//	@return []interface{}
-func (this *LinkedList) ToArray() []interface{} {
-	return Node2Array(this.Head.Next)
+//	@receiver linkList
+//	@return []any
+func (l *LinkedList) ToArray() []any {
+	return Node2Array(l.Head.Next)
 }
 
 // node 结点转数组
 //
 //	@param node
-//	@return []interface{}
-func Node2Array(node *ListNode) []interface{} {
+//	@return []any
+func Node2Array(node *ListNode) []any {
 	if node == nil {
-		return []interface{}{}
+		return []any{}
 	}
 	//使用递归，先得到当前节点的数据
-	current := []interface{}{node.Data}
+	current := []any{node.Data}
 	//然后得到剩余部分的数据
 	rest := Node2Array(node.Next)
 	//合并结果

@@ -2,7 +2,7 @@ package structure
 
 // 二叉树节点，在 binary_tree 中定义过
 // type TreeNode struct {
-// 	Value interface{}
+// 	Value any
 // 	Left  *TreeNode
 // 	Right *TreeNode
 // }
@@ -34,7 +34,7 @@ type BinarySearchTreeInterface interface {
 }
 
 // 插入操作
-func (this *BinarySearchTree) Insert(data int) {
+func (t *BinarySearchTree) Insert(data int) {
 	var insertRec func(*TreeNode, int) *TreeNode
 	insertRec = func(root *TreeNode, data int) *TreeNode {
 		// 如果 root不存在，插入
@@ -51,18 +51,18 @@ func (this *BinarySearchTree) Insert(data int) {
 		// 否则返回 root 节点
 		return root
 	}
-	this.Root = insertRec(this.Root, data)
+	t.Root = insertRec(t.Root, data)
 }
 
 // 批量插入
-func (this *BinarySearchTree) Inserts(args ...int) {
+func (t *BinarySearchTree) Inserts(args ...int) {
 	for _, data := range args {
-		this.Insert(data)
+		t.Insert(data)
 	}
 }
 
 // 查找操作
-func (this *BinarySearchTree) Search(data int) *TreeNode {
+func (t *BinarySearchTree) Search(data int) *TreeNode {
 	var searchRec func(*TreeNode, int) *TreeNode
 	// 递归查询
 	searchRec = func(root *TreeNode, data int) *TreeNode {
@@ -77,10 +77,10 @@ func (this *BinarySearchTree) Search(data int) *TreeNode {
 		// 如果查询的数据比根节点大，就在右子树中递归查找
 		return searchRec(root.Right, data)
 	}
-	return searchRec(this.Root, data)
+	return searchRec(t.Root, data)
 }
 
-func (this *BinarySearchTree) Delete(key int) {
+func (t *BinarySearchTree) Delete(key int) {
 	var deleteRec func(*TreeNode, int) *TreeNode
 	// 递归删除
 	deleteRec = func(root *TreeNode, key int) *TreeNode {
@@ -120,7 +120,7 @@ func (this *BinarySearchTree) Delete(key int) {
 		}
 		return root
 	}
-	deleteRec(this.Root, key)
+	deleteRec(t.Root, key)
 }
 
 // 找到后继结点
@@ -132,7 +132,7 @@ func findSuccessor(root *TreeNode) *TreeNode {
 }
 
 // 中序遍历
-func (this *BinarySearchTree) InOrderTraversal() []int {
+func (t *BinarySearchTree) InOrderTraversal() []int {
 	var res []int
 	var traversal func(root *TreeNode)
 
@@ -144,6 +144,6 @@ func (this *BinarySearchTree) InOrderTraversal() []int {
 		res = append(res, (root.Value).(int))
 		traversal(root.Right)
 	}
-	traversal(this.Root)
+	traversal(t.Root)
 	return res
 }

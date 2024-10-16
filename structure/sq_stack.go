@@ -6,7 +6,7 @@ import (
 
 // SqStack 顺序栈，数组实现
 type SqStack struct {
-	Data []interface{}
+	Data []any
 	Top  int //栈顶指针
 }
 
@@ -16,12 +16,12 @@ type SqStackInterface interface {
 	IsEmpty() bool
 
 	// 进栈操作
-	//  @param interface{}
-	Push(interface{})
+	//  @param any
+	Push(any)
 
 	// 出栈操作
-	//  @return interface{}
-	Pop() interface{}
+	//  @return any
+	Pop() any
 
 	// 打印栈
 	Print()
@@ -35,40 +35,40 @@ type SqStackInterface interface {
 //	@param capacity
 //	@return *SqStack
 func NewSqStack(capacity int) *SqStack {
-	return &SqStack{Data: make([]interface{}, capacity, capacity), Top: -1}
+	return &SqStack{Data: make([]any, capacity), Top: -1}
 }
 
-func (this *SqStack) IsEmpty() bool {
-	return this.Top == -1
+func (s *SqStack) IsEmpty() bool {
+	return s.Top == -1
 }
 
-func (this *SqStack) Push(element interface{}) {
-	if this.Top == cap(this.Data)-1 {
+func (s *SqStack) Push(element any) {
+	if s.Top == cap(s.Data)-1 {
 		panic("栈已满")
 	}
-	this.Top++
-	this.Data[this.Top] = element
+	s.Top++
+	s.Data[s.Top] = element
 }
 
-func (this *SqStack) Pop() interface{} {
-	if this.IsEmpty() {
+func (s *SqStack) Pop() any {
+	if s.IsEmpty() {
 		panic("栈为空")
 	}
-	element := this.Data[this.Top]
-	this.Data[this.Top] = nil
-	this.Top--
+	element := s.Data[s.Top]
+	s.Data[s.Top] = nil
+	s.Top--
 	return element
 }
 
-func (this *SqStack) Print() {
-	if this.IsEmpty() {
+func (s *SqStack) Print() {
+	if s.IsEmpty() {
 		fmt.Println("栈为空")
 	}
-	for i := this.Top; i >= 0; i-- {
-		fmt.Println(this.Data[i])
+	for i := s.Top; i >= 0; i-- {
+		fmt.Println(s.Data[i])
 	}
 }
 
-func (this *SqStack) Flush() {
-	this.Top = -1
+func (s *SqStack) Flush() {
+	s.Top = -1
 }

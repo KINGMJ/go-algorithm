@@ -55,7 +55,8 @@ ginkgo
 - 08_valid_parentheses：20. 有效的括号
 - 09_valid_palindrome：125. 验证回文串
 - 10_invert_binary_tree：226. 翻转二叉树
-
+- 11_valid_anagram：242. 有效的字母异位词
+- 12_binary_search：704. 二分查找
 
 
 
@@ -66,4 +67,4 @@ ginkgo
 
 @Web @https://leetcode.cn/problems/invert-binary-tree/description/ 
 请在 leetcode 目录生成 10_xxx 目录，里面包含两个文件：xxx.go 和 xxx_test.go。分别是算法实现和对应的测试用例。
-算法实现由我来实现，你只需要将函数定义出来就可以了；测试用例你需要提供尽可能完整的。
+算法实现由我来实现，你只需要将函数定义出来就可以了；测试用例你需要提供尽可能完整的。请直接生成可以Apply的文件。

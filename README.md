@@ -62,7 +62,11 @@ ginkgo
 - 15_balanced_binary_tree：110. 平衡二叉树
 - 16_linked_list_cycle：141. 环形链表
 - 17_implement_queue_using_stacks：232. 用栈实现队列
-
+- 18_first_bad_version：278. 第一个错误的版本
+- 19_ransom_note：383. 赎金信
+- 20_climbing_stairs：70. 爬楼梯
+- 21_longest_palindrome：409. 最长回文串
+- 22_majority_element：169. 多数元素
 
 
 

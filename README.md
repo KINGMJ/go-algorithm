@@ -67,11 +67,16 @@ ginkgo
 - 20_climbing_stairs：70. 爬楼梯
 - 21_longest_palindrome：409. 最长回文串
 - 22_majority_element：169. 多数元素
+- 23_remove_duplicates：26. 删除有序数组中的重复项
+- 24_move_zeroes：283. 移动零
+- 25_remove_element：27. 移除元素
+- 26_remove_duplicates_ii：80. 删除有序数组中的重复项 II
 
+## prompt
 
-
-## prompt 
-
-@Web @https://leetcode.cn/problems/invert-binary-tree/description/ 
+@Web @https://leetcode.cn/problems/move-zeroes/description/
 请在 leetcode 目录生成 10_xxx 目录，里面包含两个文件：xxx.go 和 xxx_test.go。分别是算法实现和对应的测试用例。
 算法实现由我来实现，你只需要将函数定义出来就可以了；测试用例你需要提供尽可能完整的。请直接生成可以Apply的文件。
+
+
+

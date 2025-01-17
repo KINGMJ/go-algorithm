@@ -71,6 +71,11 @@ ginkgo
 - 24_move_zeroes：283. 移动零
 - 25_remove_element：27. 移除元素
 - 26_remove_duplicates_ii：80. 删除有序数组中的重复项 II
+- 27_two_sum_ii：167. 两数之和 II - 输入有序数组
+- 28_reverse_string：344. 反转字符串
+- 29_squares_of_sorted_array：977. 有序数组的平方
+- 30_container_with_most_water：11. 盛最多水的容器
+- 31_jump_game：55. 跳跃游戏
 
 ## prompt
 
@@ -80,3 +85,22 @@ ginkgo
 
 
 
+
+
+-- 数组保序问题
+
+27. 移除元素
+88. 合并两个有序数组
+1089. 复写零
+2460. 对数组执行操作
+
+
+
+
+-- 贪心算法
+
+55 跳跃游戏
+45 跳跃游戏 II
+135 分发糖果
+134 加油站
+406 根据身高重建队列

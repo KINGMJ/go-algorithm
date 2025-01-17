@@ -1,18 +1,16 @@
 package assign_cookies
 
-import "slices"
+import "sort"
 
 func FindContentChildren(g []int, s []int) int {
-	slices.Sort(g)
-	slices.Sort(s)
-	// 孩子指针和饼干指针
-	var gPtr, sPtr int = 0, 0
-
-	for gPtr < len(g) && sPtr < len(s) {
-		if g[gPtr] <= s[sPtr] {
-			gPtr++
+	sort.Ints(g)
+	sort.Ints(s)
+	f1, f2 := 0, 0
+	for f1 < len(g) && f2 < len(s) {
+		if g[f1] <= s[f2] {
+			f1++
 		}
-		sPtr++
+		f2++
 	}
-	return gPtr
+	return f1
 }
